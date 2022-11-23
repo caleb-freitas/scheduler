@@ -12,7 +12,7 @@ const SignUp: NextPage = () => {
           <h2 className="text-2xl font-bold">Sign up</h2>
           <div className="flex gap-1">
             <p className="text-slate-600">Already have an account?</p>
-            <Link className="text-blue-600" href="/auth/sign-up">
+            <Link className="text-blue-600" href="/auth/sign-in">
               Sign in.
             </Link>
           </div>
@@ -89,7 +89,7 @@ const SignUp: NextPage = () => {
                 I&apos;ve read and agree to the{" "}
                 <Link
                   className="mb-4 text-sm text-blue-600"
-                  href="/legal/privacy"
+                  href="/legal/terms"
                 >
                   Terms of Service
                 </Link>
