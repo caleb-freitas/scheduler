@@ -2,32 +2,36 @@ import { type NextPage } from "next";
 
 const NewPassword: NextPage = () => {
   return (
-    <>
-      <h1>Reset your password</h1>
-      <form>
-        <div className="mb-6">
-          <label
-            htmlFor="email"
-            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+    <main className="mt-32 flex justify-center">
+      <div className="w-96">
+        <header>
+          <h2 className="pb-5 text-2xl font-bold">Reset your password</h2>
+        </header>
+        <form className="w-full">
+          <div className="mb-6">
+            <label
+              htmlFor="email"
+              className="mb-2 block text-sm font-bold text-slate-900"
+            >
+              Email
+            </label>
+            <input
+              required
+              id="email"
+              type="email"
+              placeholder="john.doe@company.com"
+              className="block w-full rounded-lg border border-slate-300 bg-slate-50 p-2.5 text-base text-slate-900 focus:bg-white"
+            />
+          </div>
+          <button
+            type="button"
+            className="mr-2 mb-2 rounded-lg bg-slate-800 px-5 py-2.5 text-base font-semibold text-white transition-all hover:bg-slate-900"
           >
-            Email adress
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            placeholder="john.doe@company.com"
-            required
-          />
-        </div>
-        <button
-          type="button"
-          className="mr-2 mb-2 rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-        >
-          Sign in
-        </button>
-      </form>
-    </>
+            Reset password
+          </button>
+        </form>
+      </div>
+    </main>
   );
 };
 
