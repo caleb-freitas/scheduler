@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { signIn, signOut } from "next-auth/react";
 
 import google from "../../assets/google.svg";
 
@@ -65,10 +66,18 @@ const SignIn: NextPage = () => {
           <div className="my-4 text-center text-sm text-slate-600">Or with</div>
           <button
             type="button"
+            onClick={() => signIn()}
             className="flex w-full items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-base font-semibold text-slate-900 transition-all hover:bg-slate-100 focus:outline-none focus:ring-4 focus:ring-slate-200"
           >
             <Image src={google} alt="google logo" width={20} />
             Google
+          </button>
+          <button
+            type="button"
+            onClick={() => signOut()}
+            className="my-6 hidden w-full rounded-lg bg-slate-800 px-5 py-2.5 text-base font-semibold text-white transition-all hover:bg-slate-900 focus:outline-none focus:ring-4 focus:ring-slate-300"
+          >
+            Sign out
           </button>
         </form>
       </div>
