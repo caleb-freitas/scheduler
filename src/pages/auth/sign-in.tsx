@@ -29,6 +29,7 @@ const SignIn: NextPage = () => {
             <input
               type="email"
               id="email"
+              disabled
               className="block w-full rounded-lg border border-slate-300 bg-slate-50 p-2.5 text-base text-slate-900 focus:bg-white"
               placeholder="john.doe@company.com"
               required
@@ -44,6 +45,7 @@ const SignIn: NextPage = () => {
             <input
               type="password"
               id="password"
+              disabled
               className="block w-full rounded-lg border border-slate-300 bg-slate-50 p-2.5 text-sm text-slate-900 focus:bg-white"
               placeholder="•••••••••"
               required
@@ -58,6 +60,7 @@ const SignIn: NextPage = () => {
             </Link>
             <button
               type="button"
+              disabled
               className="mb-2 w-full rounded-lg bg-slate-800 px-5 py-2.5 text-base font-semibold text-white transition-all hover:bg-slate-900 focus:outline-none focus:ring-4 focus:ring-slate-300"
             >
               Sign in
